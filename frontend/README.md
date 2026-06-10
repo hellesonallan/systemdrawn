@@ -1,16 +1,85 @@
-# React + Vite
+# SystemDrawn Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interface web para sistema de agendamento de tatuagens e piercings.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Tecnologias
 
-## React Compiler
+- React
+- Vite
+- Axios
+- React Router DOM
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📁 Instalação
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Entrar na pasta do frontend
+
+```bash
+cd frontend
+```
+
+### 2. Instalar dependências
+
+```bash
+npm install
+```
+
+---
+
+## ▶️ Executar projeto
+
+```bash
+npm run dev
+```
+
+A aplicação rodará em:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🔗 Configuração da API
+
+Arquivo: `src/services/api.js`
+
+```js
+import axios from "axios";
+
+export const api = axios.create({
+  baseURL: "http://localhost:3000"
+});
+```
+
+---
+
+## 🔐 Fluxo da aplicação
+
+1. Usuário digita o CPF
+2. Sistema verifica se o cadastro existe:
+   - **Se existir** → login automático
+   - **Se não existir** → cadastro rápido
+3. Usuário acessa o dashboard
+4. Pode criar, editar e excluir agendamentos
+
+---
+
+## 📌 Páginas
+
+| Rota | Descrição |
+|------|-----------|
+| `/` | Login |
+| `/dashboard` | Lista de agendamentos |
+| `/novo-agendamento` | Criar agendamento |
+| `/editar-agendamento/:id` | Editar agendamento |
+
+---
+
+## 🛑 Observações
+
+- O backend deve estar rodando em `localhost:3000`
+- Não esquecer de configurar o CORS no backend
