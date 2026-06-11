@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { api } from "../services/api";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar/Navbar";
 
 function Login() {
   const [cpf, setCpf] = useState("");
