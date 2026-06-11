@@ -1,0 +1,13 @@
+/* src/styles/variables.css */
+:root {
+  --color-bg: #fbfbfe;
+  --color-text: #050315;
+  --color-primary: #2f27ce;
+  --color-secondary: #dedcff;
+  --color-accent: #433bff;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+
+  --shadow-primary: 0 8px 20px rgba(47, 39, 206, 0.3);
+}
